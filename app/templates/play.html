@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="Description" content="Enter your description here"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.0-beta1/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+<link rel="stylesheet" href="assets/css/style.css">
+<title>Question</title>
+</head>
+<body>
+    {% if not win%}
+        <h4> Answer:{{answer}}</h4>
+        <h5> guess wrong count:{{count}}</h5>
+        <form action="/play" method="POST">
+        <br>
+        <input type="submit" name="answer" value="A" class="btn btn-outline-secondary">
+        <input type="submit" name="answer" value="B" class="btn btn-outline-secondary">
+        <input type="submit" name="answer" value="C" class="btn btn-outline-secondary">
+        <input type="submit" name="answer" value="D" class="btn btn-outline-secondary">
+    {% endif%}
+    {% if win %}
+        <h1 class="text-center"> You are win this guessing game!!! </h1>
+        <h2 class="text-center"> You guess wrong {{count}} time/s </h2>
+        <div class="d-grid gap-4 col-12">
+            <a href="/restart" class="btn btn-success btn-lg active" role="button" >Play again?</a>
+        </div>
+    {% endif%}
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.5.4/umd/popper.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.0-beta1/js/bootstrap.min.js"></script>
+</body>
+</html>
