@@ -26,7 +26,7 @@ def prepare():
                 "_id" : 666,
                 "Question" : ['', '', '', ''],
                 "Answer" : ['', '', '', ''],
-                "Count" : -1,
+                "Count" : 0,
                 "Win" : False
         })
     return redirect('/Question')

@@ -12,18 +12,28 @@
 </head>
 <body>
     {% if not win%}
-        <h4> Answer:{{answer}}</h4>
-        <h5> guess wrong count:{{count}}</h5>
+        <br>
+        <h2 class="text-center"> Answer:{{answer}}</h2>
+        <br>
+        <h3 class="text-center"> guess wrong count:{{count}}</h3>
         <form action="/play" method="POST">
         <br>
-        <input type="submit" name="answer" value="A" class="btn btn-outline-secondary">
-        <input type="submit" name="answer" value="B" class="btn btn-outline-secondary">
-        <input type="submit" name="answer" value="C" class="btn btn-outline-secondary">
-        <input type="submit" name="answer" value="D" class="btn btn-outline-secondary">
+        <div class="d-grid gap-4 col-12">
+            <input type="submit" name="answer" value="A" class="btn btn-outline-secondary">
+            <br>
+            <input type="submit" name="answer" value="B" class="btn btn-outline-secondary">
+            <br>
+            <input type="submit" name="answer" value="C" class="btn btn-outline-secondary">
+            <br>
+            <input type="submit" name="answer" value="D" class="btn btn-outline-secondary">
+        </div
     {% endif%}
     {% if win %}
+        <br>
         <h1 class="text-center"> You are win this guessing game!!! </h1>
+        <br>
         <h2 class="text-center"> You guess wrong {{count}} time/s </h2>
+        <br>
         <div class="d-grid gap-4 col-12">
             <a href="/restart" class="btn btn-success btn-lg active" role="button" >Play again?</a>
         </div>

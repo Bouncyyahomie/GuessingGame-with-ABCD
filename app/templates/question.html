@@ -11,15 +11,27 @@
 <title>Question</title>
 </head>
 <body>
-    <h4> Question:{{question}}</h4>
-    <form action="/add_question" method="POST">
     <br>
-    <input type="submit" name="add" value="A" class="btn btn-outline-secondary">
-    <input type="submit" name="add" value="B" class="btn btn-outline-secondary">
-    <input type="submit" name="add" value="C" class="btn btn-outline-secondary">
-    <input type="submit" name="add" value="D" class="btn btn-outline-secondary">
-    <a href="/play" class="btn btn-success btn-lg active" role="button" >Finished</a>
-
+    <h4 class="text-center"> Question:{{question}}</h4>
+    <form action="/add_question" method="POST">
+    <div class="d-grid gap-4 col-12">
+        <br>
+        <input type="submit" name="add" value="A" class="btn btn-outline-success">
+        <br>
+        <input type="submit" name="add" value="B" class="btn btn-outline-success">
+        <br>
+        <input type="submit" name="add" value="C" class="btn btn-outline-success">
+        <br>
+        <input type="submit" name="add" value="D" class="btn btn-outline-success">
+    </div>
+   <br>
+   <br>
+   <br>
+   <br>
+   <br>
+    <div class="d-grid gap-4 col-12">
+        <a href="/play" class="btn btn-success btn-lg active" role="button" >Finished</a>
+    </div>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.5.4/umd/popper.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.0-beta1/js/bootstrap.min.js"></script>
 </body>
